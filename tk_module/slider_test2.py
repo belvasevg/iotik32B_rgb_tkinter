@@ -30,20 +30,21 @@ class MainFrame():
             # for lf in valueOfSliders:
             #       self.frameSlidersList.append(LocalFrame(self.mainFrame))
             self.frameSlidersList = [LocalFrame(self.mainFrame) for lf in range(valueOfSliders)]
-            self.mainFrame.pack(anchor="center")
+            if __name__=="__main__":  
+                self.mainFrame.pack(anchor="center")
             for fs in range(len(self.frameSlidersList)):
                   self.frameSlidersList[fs].frame.grid(row=0,column=fs)
 
+if __name__=="__main__":
+    root = tk.Tk()
+    root.geometry("500x500")
 
-root = tk.Tk()
-root.geometry("500x500")
+    mf = MainFrame(root,3)
+    # frame1 = LocalFrame(root)
+    # frame2 = LocalFrame(root)
+    # frame3 = LocalFrame(root)
 
-mf = MainFrame(root,3)
-# frame1 = LocalFrame(root)
-# frame2 = LocalFrame(root)
-# frame3 = LocalFrame(root)
-
-root.mainloop()
+    root.mainloop()
 
 
             
