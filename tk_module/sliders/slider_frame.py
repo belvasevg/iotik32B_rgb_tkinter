@@ -3,6 +3,9 @@ import tkinter as tk
 import tkinter.ttk as ttk
 
 class LocalFrame:
-    def __init__(self, master,color="white"):
+    """
+    Класс для обработки локальной рамки слайдера
+    """
+    def __init__(self, master,color="white",total_color:int=None,tcf=None):
           self.frame = ttk.LabelFrame(master)
-          self.frameSlider = slider.Slider(self.frame,color)
+          self.frameSlider = slider.Slider(self.frame,color,total_color,tcf)
