@@ -13,7 +13,10 @@ class Slider:
         self.colorForLabel = actColor
         self.current_value = tk.IntVar()
         self.colorLabel = ttk.Label(master, width=10)
-        self.myscale = ttk.Scale(master=master,from_=255,to=0,command=self.slider_changed,variable=self.current_value,orient="vertical",value=0)
+        self.myscale = ttk.Scale(master=master,from_=255,to=0,
+                                 command=self.slider_changed,
+                                 variable=self.current_value,
+                                 orient="vertical",value=0)
         self.mylabel = ttk.Label(master=master)
 
         self.colorLabel.grid(row=0,column=0)

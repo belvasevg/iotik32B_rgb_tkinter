@@ -31,7 +31,7 @@ class MainColor:
             case 'b':
                 self.BV=value
         self.colors = ['#','%02x'%(self.RV),'%02x'%(self.GV),'%02x'%(self.BV)]
-        self.color_code_label['text'] = ''.join(self.colors)
+        self.color_code_label['text'] = ''.join(self.colors).upper()
         self.total_color_label["background"] = ''.join(self.colors)
     
     def get_colors(self):
