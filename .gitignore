@@ -1,0 +1,9 @@
+#Файлы platformIO.iotik_rgb_tk/.pio
+iotik_rgb_tk/.vscode/.browse.c_cpp.db*
+iotik_rgb_tk/.vscode/c_cpp_properties.json
+iotik_rgb_tk/.vscode/launch.json
+iotik_rgb_tk/.vscode/ipch
+#Файлы python
+tk_module/slider_test.py
+tk_module/slider_test2.py
+tk_module/__pycache__
