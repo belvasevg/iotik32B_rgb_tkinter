@@ -11,16 +11,22 @@ class MainColor:
 
         self.frame = ttk.LabelFrame(master,text="Total color")
 
-        self.color_name_code = ttk.Label(self.frame,text="Color code: ")
+        self.color_name_code = ttk.Label(self.frame,
+                                         text="Color code: ",
+                                         justify='center')
 
-        self.color_code_label = ttk.Label(self.frame,text='#000000',width=20)
+        self.color_code_label = ttk.Label(self.frame,text='#000000',
+                                          width=20,
+                                          justify='right')
 
-        self.total_color_label = ttk.Label(self.frame,background='#000000',width=20)
+        self.total_color_label = ttk.Label(self.frame,
+                                           background='#000000',
+                                           width=20)
         if __name__=='__main__':
             self.frame.pack(anchor='center')
-        self.color_name_code.grid(row=0,column=0)
-        self.color_code_label.grid(row=0,column=1)
-        self.total_color_label.grid(row=4,column=0,columnspan=2)
+        self.color_name_code.grid(row=0,column=0,pady=10,padx=5)
+        self.color_code_label.grid(row=0,column=1,pady=10,padx=5)
+        self.total_color_label.grid(row=4,column=0,columnspan=2,pady=10)
     
     def set_color(self,color,value):
         match color:

@@ -12,10 +12,16 @@ class COM_setter:
         if __name__=='__main__':
             self.testLabel = ttk.Label(self.frame,textvariable=self.com_var)
         else:
-            self.label_COM_name = ttk.Label(self.frame,text="Порт: ")
-            self.label_COM_state = ttk.Label(self.frame,textvariable=self.com_var)
-        self.com_set_Cb = ttk.Combobox(self.frame,textvariable=self.com_var,values=self.com_list)
-
+            self.label_COM_name = ttk.Label(self.frame,
+                                            text="Порт: ",
+                                            width=20)
+            self.label_COM_state = ttk.Label(self.frame,
+                                             textvariable=self.com_var,
+                                            width=20)
+        self.com_set_Cb = ttk.Combobox(self.frame,
+                                       textvariable=self.com_var,
+                                       values=self.com_list,width=20)
+    
         if __name__=='__main__':
             self.frame.pack(anchor='center')
             self.testLabel.grid(row=0,column=0)
@@ -25,6 +31,8 @@ class COM_setter:
             self.label_COM_name.grid(row=0,column=0)
             self.label_COM_state.grid(row=0,column=1)
             self.com_set_Cb.grid(row=1,column=0,columnspan=2)
+    def get_com_var(self):
+        return self.com_var.get()
         
     
     
