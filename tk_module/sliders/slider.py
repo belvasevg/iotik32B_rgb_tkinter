@@ -31,7 +31,7 @@ class Slider:
             if (var) > 0:
                 self.colorLabel["background"] = self.colorForLabel
             else:
-                self.colorLabel["background"] = ""
+                self.colorLabel["background"] =  self.total_label_func
             
 
     def get_current_value(self):
